@@ -1,11 +1,11 @@
 Package: CovidChile
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Grafico de Casos Covid-19 Chile.
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Author: Camilo Gonzalez
+Maintainer: Camilo Gonzalez <cigonzalez2@uc.cl>
+Description: Entrega los ultimos 7 cifras de contagiados diarios y 
+  un grafico.
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
