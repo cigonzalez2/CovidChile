@@ -5,7 +5,7 @@
 #' @examples
 #' covid_chile()
 covid_chile <- function(){
-
+  library(rio)
   ruta1 <- 'https://raw.githubusercontent.com/MinCiencia/Datos-COVID19/'
   ruta2 <- 'master/output/producto5/TotalesNacionales.csv'
   ruta <- paste(ruta1, ruta2, sep = '')
