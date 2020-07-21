@@ -52,7 +52,7 @@ covid_chile <- function(){
     linea <- smooth.spline(tiempo, casos_nuevos, spar = 0.8)
     lines(linea, col = 'orange', lwd = 2)
   }
-  else{print('Se necesita que instalar la librería rio')}
+  else{print('Se necesita instalar la librería rio')}
 
 }
 
