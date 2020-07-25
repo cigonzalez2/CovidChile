@@ -10,7 +10,7 @@ covid_chile <- function(){
     ruta1 <- 'https://raw.githubusercontent.com/MinCiencia/Datos-COVID19/'
     ruta2 <- 'master/output/producto5/TotalesNacionales.csv'
     ruta <- paste(ruta1, ruta2, sep = '')
-    data = import(ruta)
+    data = import(ruta, format = 'csv', header = T)
 
     #Predicción para Lunes 13 de Julio:
 
