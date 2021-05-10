@@ -32,7 +32,7 @@ covid_chile <- function(){
       casos_nuevos,
       pch = 20,
       col = 'skyblue3',
-      lwd = 3,
+      lwd = 2,
       type = 'l',
       xlab = 'Tiempo',
       ylab = 'Casos Nuevos',
