@@ -12,33 +12,26 @@ covid_chile <- function(){
     ruta <- paste(ruta1, ruta2, sep = '')
     data = import(ruta, format = 'csv', header = T)
 
-    #Predicción para Lunes 13 de Julio:
-
+    # Tabla nuevos  -----------------------------------------------------------
+    
     n <- length(data)
     ultimos <- data[7, c((n-6):n)]
     print('Los contagiados de los 7 días anteriores son:')
     print(ultimos)
-    # Casos nuevos  -----------------------------------------------------------
-
+    
+    # Gráfico nuevos  ---------------------------------------------------------
 
     suppressWarnings(casos_nuevos <- as.vector(na.omit(as.numeric(data[7,]))))
     fecha <- as.Date(colnames(data)[-1])
-
-
-  # Regresión Lineal --------------------------------------------------------
-
+    
     n <- length(casos_nuevos)
     tiempo <- 1:n
-    tiempo2 <- tiempo^2
-    dummy <- c(rep(0, 70), rep(1, (n-70)))
-
-  # Gráfico -----------------------------------------------------------------
 
     plot(
       tiempo,
       casos_nuevos,
       pch = 20,
-      col = 'steelblue',
+      col = 'skyblue3',
       lwd = 3,
       type = 'l',
       xlab = 'Tiempo',
@@ -49,7 +42,7 @@ covid_chile <- function(){
     )
 
 
-    linea <- smooth.spline(tiempo, casos_nuevos, spar = 0.8)
+    linea <- smooth.spline(tiempo, casos_nuevos, spar = 0.5)
     lines(linea, col = 'orange', lwd = 2)
   }
   else{print('Se necesita instalar la librería rio')}
